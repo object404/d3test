@@ -8,9 +8,7 @@ let data = d3.json('data.json').then(function (data) {
     svg.selectAll('circle').data(data).enter()
         .append('circle')
         /*
-        .attr('cx', function (d, i) {
-            return i * 50 + 20;
-        })
+        .attr('cx', function (d, i) => i * 50 + 20})
         */
         .attr('cx', d => d.x * 5)
         .attr('cy', d => d.y * 5)
@@ -18,4 +16,4 @@ let data = d3.json('data.json').then(function (data) {
         .attr('r', d => d.value);
 })
 
-console.log(circles);
+console.log(svg);
